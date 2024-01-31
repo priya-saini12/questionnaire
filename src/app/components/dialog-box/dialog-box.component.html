@@ -1,7 +1,9 @@
 <div class="main">
-    <div *ngFor="let question of questions">
-        <p>{{question.question}}</p>
+    <div *ngFor="let question of questions.slice(0, currentIndex)">
+        <p>{{question.question}}
+        </p>
+        <app-input-field [type]="question.type"></app-input-field>
     </div>
     <button mat-raised-button color="warn">Previous</button>&nbsp;
-    <button mat-raised-button color="accent">Next</button>
+    <button mat-raised-button color="accent" (click)="next()">Next</button>
 </div>
