@@ -1,0 +1,152 @@
+{
+    "Questions": [
+        {
+            "questionNo": "1",
+            "type":"radio",
+            "question": "What is your role in development?",
+            "options": [
+                {"option":"Frontend"},
+                {"option":"Backend"}
+            ]
+        },
+        {
+            "questionNo": "2",
+            "type":"checkbox",
+            "question": "What skills do you have as a frontend developer?",
+            "options": [
+                {"option":"Angular"},
+                {"option":"React"},
+                {"option":"HTML & CSS"}
+            ]
+        },
+        {
+            "questionNo": "3",
+            "type":"checkbox",
+            "question": "What skills do you have as a backend developer?",
+            "options": [
+                {"option":"Nodejs"},
+                {"option":"ASP.net"}
+            ]
+        }
+    ],
+    "Angular": [
+        {
+            "questionNo": "1",
+            "type":"radio",
+            "question": "Angular is primarily considered as?",
+            "options": [
+                {"option":"A JavaScript Framework"},
+                {"option":"A CSS Framework"},
+                {"option":"A content management system"},
+                {"option":"A database system"}
+            ]
+        },
+        {
+            "questionNo": "2",
+            "type":"radio",
+            "question": "How can you generate a new service using Angular CLI?",
+            "options": [
+                {"option":"ng create service my-service"},
+                {"option":"ng generate service my-service"},
+                {"option":"ng new service my-service"},
+                {"option":"ng add service my-service"}
+            ]
+        }
+    ],
+    "React": [
+        {
+            "questionNo": "1",
+            "type":"radio",
+            "question": "Which of the following command is used to install create-react-app?",
+            "options": [
+                {"option":"npm install -g create-react-app"},
+                {"option":"npm install create-react-app"},
+                {"option":"npm install -f create-react-app"},
+                {"option":"install -g create-react-app"}
+            ]
+        },
+        {
+            "questionNo": "2",
+            "type":"radio",
+            "question": "What is the default port where webpack-server runs?",
+            "options": [
+                {"option":"3000"},
+                {"option":"8080"},
+                {"option":"3030"},
+                {"option":"6060"}
+            ]
+        }
+    ],
+    "HTML&CSS": [
+        {
+            "questionNo": "1",
+            "type":"radio",
+            "question": "Which of the following element is responsible for making the text bold in HTML?",
+            "options": [
+                {"option":"<pre>"},
+                {"option":"<a>"},
+                {"option":"<b>"},
+                {"option":"<br>"}
+            ]
+        },
+        {
+            "questionNo": "2",
+            "type":"radio",
+            "question": " Which of the following tag is used to embed css in html page?",
+            "options": [
+                {"option":"<css>"},
+                {"option":"<!DOCTYPE html>"},
+                {"option":"<script>"},
+                {"option":"<style>"}
+            ]
+        }
+    ],
+    "NodeJs": [
+        {
+            "questionNo": "1",
+            "type":"radio",
+            "question": "The Node.js modules can be exposed using:",
+            "options": [
+                {"option":"expose"},
+                {"option":"module"},
+                {"option":"exports"},
+                {"option":"All of the above"}
+            ]
+        },
+        {
+            "questionNo": "2",
+            "type":"radio",
+            "question": "Which of the following extension is used to save the Node.js files?",
+            "options": [
+                {"option":".js"},
+                {"option":".node"},
+                {"option":".java"},
+                {"option":".txt"}
+            ]
+        }
+    ],
+    "ASP.net": [
+        {
+            "questionNo": "1",
+            "type":"radio",
+            "question": "What is ASP.NET?",
+            "options": [
+                {"option":"A programming language"},
+                {"option":"A web application framework"},
+                {"option":"A database management system"},
+                {"option":"An operating system"}
+            ]
+        },
+        {
+            "questionNo": "2",
+            "type":"radio",
+            "question": "What is the extension of an ASP.NET page?",
+            "options": [
+                {"option":".asp"},
+                {"option":".aspx"},
+                {"option":".php"},
+                {"option":".html"}
+            ]
+        }
+    ]
+}
