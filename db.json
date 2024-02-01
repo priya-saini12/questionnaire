@@ -51,6 +51,11 @@
                 {"option":"ng new service my-service"},
                 {"option":"ng add service my-service"}
             ]
+        },
+        {
+            "questionNo": "3",
+            "type":"text",
+            "question": "How many types of Structural directives?"
         }
     ],
     "React": [

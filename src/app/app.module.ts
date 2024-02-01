@@ -5,15 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './Shared/Material/material/material.module';
-import { InputFieldComponent } from './components/input-field/input-field.component';
+import { InputFieldComponent } from './Shared/components/input-field/input-field.component';
 import { DialogBoxComponent } from './components/dialog-box/dialog-box.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CheckboxComponent } from './Shared/components/checkbox/checkbox.component';
+import { RadioComponent } from './Shared/components/radio/radio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InputFieldComponent,
-    DialogBoxComponent
+    DialogBoxComponent,
+    CheckboxComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,

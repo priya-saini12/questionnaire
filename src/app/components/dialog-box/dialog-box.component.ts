@@ -9,9 +9,10 @@ import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 export class DialogBoxComponent implements OnInit {
   currentIndex: number = 1;
   questions: any[] = [];
+  options: any[] = [];
   constructor(private _service: QuestionsService) { }
   ngOnInit(): void {
-    this._service.getQuestions().subscribe((data) => {
+    this._service.getQuestionsOfAngular().subscribe(data => {
       this.questions = data;
     })
   }

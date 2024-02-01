@@ -1,8 +1,12 @@
 <div class="main">
     <div *ngFor="let question of questions.slice(0, currentIndex)">
-        <p>{{question.question}}
-        </p>
-        <app-input-field [type]="question.type"></app-input-field>
+        <div>
+            <p>{{question.questionNo}} {{question.question}}</p>
+            <span *ngFor="let option of question.options; let i = index">
+                <app-radio [type]="question.type" [value]='i'>{{option.option}}</app-radio>
+                <app-checkbox [type]="question.type">{{option.option}}</app-checkbox>
+            </span>
+        </div>
     </div>
     <button mat-raised-button color="warn">Previous</button>&nbsp;
     <button mat-raised-button color="accent" (click)="next()">Next</button>
