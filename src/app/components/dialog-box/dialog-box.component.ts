@@ -9,16 +9,27 @@ import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 export class DialogBoxComponent implements OnInit {
   currentIndex: number = 1;
   questions: any[] = [];
-  options: any[] = [];
-  constructor(private _service: QuestionsService) { }
+  selectedOption: object = {};
+  //  myForm!:FormGroup;
+  constructor(private _service: QuestionsService) {
+    //     this.myForm=new FormGroup({
+    // radio: new FormControl(''),
+    // checkbox: new FormControl('')
+    //     })
+  }
   ngOnInit(): void {
-    this._service.getQuestionsOfAngular().subscribe(data => {
+    this._service.getQuestions().subscribe(data => {
       this.questions = data;
     })
   }
   next() {
     if (this.questions.length > this.currentIndex) {
       this.currentIndex++;
+    }
+  }
+  prev() {
+    if (this.currentIndex > 1) {
+      this.currentIndex--;
     }
   }
 }

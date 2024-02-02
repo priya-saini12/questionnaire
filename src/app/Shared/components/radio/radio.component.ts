@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class RadioComponent {
   @Input() type: string = "";
   @Input() value: number = 0;
+  // @Input() control: string = '';
 }

@@ -1,8 +1,8 @@
 {
     "Questions": [
         {
-            "questionNo": "1",
             "type":"radio",
+            "category":"tech",
             "question": "What is your role in development?",
             "options": [
                 {"option":"Frontend"},
@@ -10,8 +10,8 @@
             ]
         },
         {
-            "questionNo": "2",
             "type":"checkbox",
+            "category":"Frontend",
             "question": "What skills do you have as a frontend developer?",
             "options": [
                 {"option":"Angular"},
@@ -20,19 +20,17 @@
             ]
         },
         {
-            "questionNo": "3",
             "type":"checkbox",
+            "category":"Backend",
             "question": "What skills do you have as a backend developer?",
             "options": [
                 {"option":"Nodejs"},
                 {"option":"ASP.net"}
             ]
-        }
-    ],
-    "Angular": [
+        },
         {
-            "questionNo": "1",
             "type":"radio",
+            "category":"Angular",
             "question": "Angular is primarily considered as?",
             "options": [
                 {"option":"A JavaScript Framework"},
@@ -42,8 +40,8 @@
             ]
         },
         {
-            "questionNo": "2",
             "type":"radio",
+            "category":"Angular",
             "question": "How can you generate a new service using Angular CLI?",
             "options": [
                 {"option":"ng create service my-service"},
@@ -53,15 +51,8 @@
             ]
         },
         {
-            "questionNo": "3",
-            "type":"text",
-            "question": "How many types of Structural directives?"
-        }
-    ],
-    "React": [
-        {
-            "questionNo": "1",
             "type":"radio",
+            "category":"React",
             "question": "Which of the following command is used to install create-react-app?",
             "options": [
                 {"option":"npm install -g create-react-app"},
@@ -71,8 +62,8 @@
             ]
         },
         {
-            "questionNo": "2",
             "type":"radio",
+            "category":"React",
             "question": "What is the default port where webpack-server runs?",
             "options": [
                 {"option":"3000"},
@@ -80,12 +71,10 @@
                 {"option":"3030"},
                 {"option":"6060"}
             ]
-        }
-    ],
-    "HTML&CSS": [
+        },
         {
-            "questionNo": "1",
             "type":"radio",
+            "category":"HTML & CSS",
             "question": "Which of the following element is responsible for making the text bold in HTML?",
             "options": [
                 {"option":"<pre>"},
@@ -95,8 +84,8 @@
             ]
         },
         {
-            "questionNo": "2",
             "type":"radio",
+            "category":"HTML & CSS",
             "question": " Which of the following tag is used to embed css in html page?",
             "options": [
                 {"option":"<css>"},
@@ -104,12 +93,10 @@
                 {"option":"<script>"},
                 {"option":"<style>"}
             ]
-        }
-    ],
-    "NodeJs": [
+        },
         {
-            "questionNo": "1",
             "type":"radio",
+            "category":"Nodejs",
             "question": "The Node.js modules can be exposed using:",
             "options": [
                 {"option":"expose"},
@@ -119,8 +106,8 @@
             ]
         },
         {
-            "questionNo": "2",
             "type":"radio",
+            "category":"Nodejs",
             "question": "Which of the following extension is used to save the Node.js files?",
             "options": [
                 {"option":".js"},
@@ -128,12 +115,10 @@
                 {"option":".java"},
                 {"option":".txt"}
             ]
-        }
-    ],
-    "ASP.net": [
+        },
         {
-            "questionNo": "1",
             "type":"radio",
+            "category":"ASP.net",
             "question": "What is ASP.NET?",
             "options": [
                 {"option":"A programming language"},
@@ -143,8 +128,8 @@
             ]
         },
         {
-            "questionNo": "2",
             "type":"radio",
+            "category":"ASP.net",
             "question": "What is the extension of an ASP.NET page?",
             "options": [
                 {"option":".asp"},
