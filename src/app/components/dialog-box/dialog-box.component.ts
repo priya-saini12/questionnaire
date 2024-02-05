@@ -7,29 +7,52 @@ import { QuestionsService } from 'src/app/Shared/Services/questions.service';
   styleUrls: ['./dialog-box.component.css']
 })
 export class DialogBoxComponent implements OnInit {
-  currentIndex: number = 1;
+  currentIndex: number = 0;
   questions: any[] = [];
-  selectedOption: object = {};
-  //  myForm!:FormGroup;
-  constructor(private _service: QuestionsService) {
-    //     this.myForm=new FormGroup({
-    // radio: new FormControl(''),
-    // checkbox: new FormControl('')
-    //     })
-  }
+  selectedOptions: string | undefined;
+  // category: any;
+  constructor(private _service: QuestionsService) { }
   ngOnInit(): void {
     this._service.getQuestions().subscribe(data => {
       this.questions = data;
+      // this.filterQuestions();
+      // this.questions.forEach(element=>{
+      // this.category= element.category;              
+      // })
     })
   }
+  // selectedOption(category: string) {
+  //   this.selectedOptions= category;
+  //   console.log(this.selectedOptions);
+  // }
+  selectedOption(option: string) {
+    this.selectedOptions = option;
+    // console.log(this.selectedOptions);
+  }
   next() {
-    if (this.questions.length > this.currentIndex) {
+    // if(this.questions[this.currentIndex].category === this.selectedOption){
+    if (this.questions.length > this.currentIndex + 1) {
       this.currentIndex++;
+      this.filterQuestions();
     }
+    // }
   }
   prev() {
     if (this.currentIndex > 1) {
       this.currentIndex--;
+      this.filterQuestions();
+    }
+  }
+  filterQuestions() {
+    let filterQuestion: any[] = [];
+    // let test = this.questions.filter(q => {
+    //    if( this.selectedOptions === q.category){
+    //   }});
+    for (let question of this.questions) {
+      if (question.category === this.selectedOptions) {
+        filterQuestion.push(question);
+        console.log(filterQuestion);
+      }
     }
   }
 }

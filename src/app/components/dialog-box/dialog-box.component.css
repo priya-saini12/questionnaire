@@ -1,10 +1,11 @@
 .main{
-    height: 200px;
+    height: 250px;
     max-width: 300px;
     box-shadow: 0 0 8px grey;
     padding: 30px;
-    overflow: auto;
+    /* overflow: auto; */
 }
 .buttons{
     text-align: center;
+    margin: 10px;
 }

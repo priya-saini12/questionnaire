@@ -1,16 +1,18 @@
 <div class="main">
-    <div *ngFor="let question of questions.slice(0, currentIndex)">
+    <div *ngFor="let question of questions.slice(currentIndex, currentIndex + 1)">
         <p>{{question.question}}</p>
-        <!-- <form [formGroup]="myForm"> -->
         <span *ngFor="let option of question.options; let i = index">
-            <app-radio [type]="question.type" [value]='i'>{{option.option}}</app-radio>
-            <app-checkbox [type]="question.type">{{option.option}}</app-checkbox>
+            <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.category)">{{option.option}}</app-radio>
+            <app-checkbox [type]="question.type" (click)="selectedOption(question.category)">{{option.option}}</app-checkbox> -->
+            <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(option.option)">{{option.option}}</app-radio>
+            <app-checkbox [type]="question.type" (click)="selectedOption(option.option)">{{option.option}}</app-checkbox> -->
+            <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.options[i].option)">{{option.option}}</app-radio>
+            <app-checkbox [type]="question.type" (click)="selectedOption(question.options[i].option)">{{option.option}}</app-checkbox>
         </span>
-        <!-- </form> -->
     </div>
     <div class="buttons">
-        <button mat-raised-button color="warn" (click)="prev()" [disabled]="currentIndex===1">Previous</button>&nbsp;
-        <button mat-raised-button color="accent" (click)="next()"
-            [disabled]="this.questions.length <= this.currentIndex">Next</button>
+        <button mat-raised-button color="warn" (click)="prev()">Previous</button>&nbsp;
+        <button mat-raised-button color="accent" (click)="next()">Next</button>
     </div>
 </div>
+
