@@ -6,8 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./checkbox.component.css']
 })
 export class CheckboxComponent {
-  @Input() type:string="";
-  
+  @Input() type: string = "";
+
 
   // @Input() control:string="";
 
