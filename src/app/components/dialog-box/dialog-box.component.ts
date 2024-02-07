@@ -31,6 +31,7 @@ export class DialogBoxComponent implements OnInit {
   //   console.log(this.selectedOptions);
   // }
   selectedOption(option: string) {
+    // this.selectedOptions=[];
     this.selectedOptions.push(option);
     for (let option of this.selectedOptions) {
       this.option = option;
@@ -41,11 +42,12 @@ export class DialogBoxComponent implements OnInit {
     // this.filterQuestions();
   }
   next() {
+    // this.selectedOptions=[];
     // if(this.questions[this.currentIndex].category === this.selectedOption){
-    if (this.questions.length > this.currentIndex + 1) {
-      this.currentIndex++;
-      // this.filterQuestions();
-    }
+      if (this.questions.length > this.currentIndex + 1) {
+        this.currentIndex++;
+        // this.filterQuestions();
+      }
     // }
   }
   prev() {
