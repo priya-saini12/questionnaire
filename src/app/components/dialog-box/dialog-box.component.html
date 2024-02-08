@@ -1,11 +1,13 @@
 <div class="main">
-    <div *ngFor="let question of questions.slice(currentIndex, currentIndex + 1)">
+        <span *ngFor="let question of myVisibleQues">
+            <p>{{question.question}}</p>
+            <span *ngFor="let option of question.options; let i = index">
+        <app-radio [type]="question.type"  [value]='i' (click)="selectedOption(question.options[i].option)">{{option.option}}</app-radio>
+        </span>
+        </span>
+    <div *ngFor="let question of filterQuestion">
         <p>{{question.question}}</p>
         <span *ngFor="let option of question.options; let i = index">
-            <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.category)">{{option.option}}</app-radio>
-            <app-checkbox [type]="question.type" (click)="selectedOption(question.category)">{{option.option}}</app-checkbox> -->
-            <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(option.option)">{{option.option}}</app-radio>
-            <app-checkbox [type]="question.type" (click)="selectedOption(option.option)">{{option.option}}</app-checkbox> -->
             <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.options[i].option)">{{option.option}}</app-radio>
             <app-checkbox [type]="question.type" (click)="selectedOption(question.options[i].option)">{{option.option}}</app-checkbox>
         </span>
@@ -16,3 +18,7 @@
     </div>
 </div>
 
+  <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.category)">{{option.option}}</app-radio>
+            <app-checkbox [type]="question.type" (click)="selectedOption(question.category)">{{option.option}}</app-checkbox> -->
+            <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(option.option)">{{option.option}}</app-radio>
+            <app-checkbox [type]="question.type" (click)="selectedOption(option.option)">{{option.option}}</app-checkbox> -->

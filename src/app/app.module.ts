@@ -10,6 +10,7 @@ import { DialogBoxComponent } from './components/dialog-box/dialog-box.component
 import { HttpClientModule } from '@angular/common/http';
 import { CheckboxComponent } from './Shared/components/checkbox/checkbox.component';
 import { RadioComponent } from './Shared/components/radio/radio.component';
+import { QuestionsService } from './Shared/Services/questions.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { RadioComponent } from './Shared/components/radio/radio.component';
     MaterialModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [QuestionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

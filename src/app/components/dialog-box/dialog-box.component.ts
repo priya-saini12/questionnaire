@@ -12,6 +12,7 @@ export class DialogBoxComponent implements OnInit {
   questions: any[] = [];
   selectedOptions: string[] = [];
   option: any;
+  filterQuestion: any[] = [];
   // category: any;
 
   constructor(private _service: QuestionsService) { }
@@ -19,7 +20,7 @@ export class DialogBoxComponent implements OnInit {
     this._service.getQuestions().subscribe(data => {
       this.questions = data;
       this.myVisibleQues.push(this.questions[0]);
-      console.log(this.myVisibleQues);
+      // console.log(this.myVisibleQues);
       // this.filterQuestions();
       // this.questions.forEach(element=>{
       // this.category= element.category;              
@@ -35,7 +36,7 @@ export class DialogBoxComponent implements OnInit {
     this.selectedOptions.push(option);
     for (let option of this.selectedOptions) {
       this.option = option;
-      console.log(this.option);
+      // console.log(this.option);
       this.filterQuestions();
     }
     //  console.log(this.selectedOptions);
@@ -57,15 +58,14 @@ export class DialogBoxComponent implements OnInit {
     }
   }
   filterQuestions() {
-    let filterQuestion: any[] = [];
     // let test = this.questions.filter(q => {
     //    if( this.selectedOptions === q.category){
     //   }});
     // debugger
     for (let question of this.questions) {
       if (question.category === this.option) {
-        filterQuestion.push(question);
-        console.log(filterQuestion);
+        this.filterQuestion.push(question);
+        // console.log(this.filterQuestion);
       }
     }
     // this.currentIndex = 0;
