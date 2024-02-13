@@ -13,48 +13,50 @@ export class DialogBoxComponent implements OnInit {
   selectedOptions: string[] = [];
   option: any;
   filterQuestion: any[] = [];
-  isFirst:boolean=true;
-  // category: any;
+  isFirst: boolean = true;
+  currentQuestion: any = [];
 
   constructor(private _service: QuestionsService) { }
-  ngOnInit(): void {
+  ngOnInit() {
     this._service.getQuestions().subscribe(data => {
       this.questions = data;
       this.myVisibleQues.push(this.questions[0]);
-      
     })
   }
- 
+
+  selectedOption(option: string) {
+    this.selectedOptions.push(option);
+  }
+
   filterQuestions() {
-    this.isFirst=false;
-    for (let question of this.questions) {
-      if (question.category === this.option) {
-        this.filterQuestion.push(question);
-        // console.log(this.filterQuestion);
+    this.isFirst = false;
+    for (let option of this.selectedOptions) {
+      this.option = option
+      for (let question of this.questions) {
+        if (question.category === this.option) {
+          this.filterQuestion.push(question);
+        }
       }
     }
   }
-  selectedOption(option: string) {
-    this.selectedOptions=[];
-    this.selectedOptions.push(option);
-    for (let option of this.selectedOptions) {
-      this.option = option;
-      // console.log(this.option);
-      // this.filterQuestions();
-    }
-  }
+
   next() {
-    // this.selectedOptions=[];
-      // if (this.currentIndex + 1) {
-        this.currentIndex++;
-        this.filterQuestions();      
-    // }
+    if (this.filterQuestion.length > 0) {
+      this.currentIndex++;
+    }
+    this.filterQuestions();
+    this.selectedOptions = [];
+let response= {
+  selectedQuestion : this.filterQuestion[this.currentIndex].question,
+  selectedAns: this.selectedOption
+}
+this._service.selectedQuestions(response).subscribe();
   }
+
   prev() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.filterQuestions();
     }
   }
-  
 }

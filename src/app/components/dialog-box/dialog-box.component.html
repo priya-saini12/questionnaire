@@ -1,28 +1,25 @@
 <div class="main">
     <div *ngIf="isFirst">
-        <span *ngFor="let question of myVisibleQues">
-            <p>{{question.question}}</p>
-            <span *ngFor="let option of question.options; let i = index">
-        <app-radio [type]="question.type"  [value]='i' (click)="selectedOption(question.options[i].option)">{{option.option}}</app-radio>
-        </span>
-    </span>
-</div>
-<div *ngIf="!isFirst">
-    <div *ngFor="let question of filterQuestion">
-        <p>{{question.question}}</p>
-        <span *ngFor="let option of question.options; let i = index">
-            <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.options[i].option)">{{option.option}}</app-radio>
-            <app-checkbox [type]="question.type" (click)="selectedOption(question.options[i].option)">{{option.option}}</app-checkbox>
-        </span>
+        <!-- <span *ngFor="let question of myVisibleQues"> -->
+            <p>{{myVisibleQues[currentIndex].question}}</p>
+            <span *ngFor="let option of myVisibleQues[currentIndex].options; let i = index">
+                <app-radio [type]="myVisibleQues[currentIndex].type" [value]='i'
+                    (click)="selectedOption(myVisibleQues[currentIndex].options[i].option)">{{option.option}}</app-radio>
+            </span>
+        <!-- </span> -->
     </div>
-</div>
+    <div *ngIf="!isFirst">
+            <p>{{filterQuestion[currentIndex].question}}</p>
+            <span *ngFor="let option of filterQuestion[currentIndex].options; let i = index">
+                <app-radio [type]="filterQuestion[currentIndex].type" [value]='i'
+                    (click)="selectedOption(filterQuestion[currentIndex].options[i].option)">{{option.option}}</app-radio>
+                <app-checkbox [type]="filterQuestion[currentIndex].type"
+                    (click)="selectedOption(filterQuestion[currentIndex].options[i].option)">{{option.option}}</app-checkbox>
+            </span>
+        
+    </div>
     <div class="buttons">
         <button mat-raised-button color="warn" (click)="prev()">Previous</button>&nbsp;
         <button mat-raised-button color="accent" (click)="next()">Next</button>
     </div>
 </div>
-
-  <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(question.category)">{{option.option}}</app-radio>
-            <app-checkbox [type]="question.type" (click)="selectedOption(question.category)">{{option.option}}</app-checkbox> -->
-            <!-- <app-radio [type]="question.type" [value]='i' (click)="selectedOption(option.option)">{{option.option}}</app-radio>
-            <app-checkbox [type]="question.type" (click)="selectedOption(option.option)">{{option.option}}</app-checkbox> -->

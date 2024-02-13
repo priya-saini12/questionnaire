@@ -1,142 +1,253 @@
 {
-    "Questions": [
+  "Questions": [
+    {
+      "type": "radio",
+      "category": "tech",
+      "question": "What is your role in development?",
+      "options": [
         {
-            "type":"radio",
-            "category":"tech",
-            "question": "What is your role in development?",
-            "options": [
-                {"option":"Frontend"},
-                {"option":"Backend"}
-            ]
+          "option": "Frontend"
         },
         {
-            "type":"checkbox",
-            "category":"Frontend",
-            "question": "What skills do you have as a frontend developer?",
-            "options": [
-                {"option":"Angular"},
-                {"option":"React"},
-                {"option":"HTML & CSS"}
-            ]
-        },
-        {
-            "type":"checkbox",
-            "category":"Backend",
-            "question": "What skills do you have as a backend developer?",
-            "options": [
-                {"option":"Nodejs"},
-                {"option":"ASP.net"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"Angular",
-            "question": "Angular is primarily considered as?",
-            "options": [
-                {"option":"A JavaScript Framework"},
-                {"option":"A CSS Framework"},
-                {"option":"A content management system"},
-                {"option":"A database system"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"Angular",
-            "question": "How can you generate a new service using Angular CLI?",
-            "options": [
-                {"option":"ng create service my-service"},
-                {"option":"ng generate service my-service"},
-                {"option":"ng new service my-service"},
-                {"option":"ng add service my-service"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"React",
-            "question": "Which of the following command is used to install create-react-app?",
-            "options": [
-                {"option":"npm install -g create-react-app"},
-                {"option":"npm install create-react-app"},
-                {"option":"npm install -f create-react-app"},
-                {"option":"install -g create-react-app"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"React",
-            "question": "What is the default port where webpack-server runs?",
-            "options": [
-                {"option":"3000"},
-                {"option":"8080"},
-                {"option":"3030"},
-                {"option":"6060"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"HTML & CSS",
-            "question": "Which of the following element is responsible for making the text bold in HTML?",
-            "options": [
-                {"option":"<pre>"},
-                {"option":"<a>"},
-                {"option":"<b>"},
-                {"option":"<br>"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"HTML & CSS",
-            "question": " Which of the following tag is used to embed css in html page?",
-            "options": [
-                {"option":"<css>"},
-                {"option":"<!DOCTYPE html>"},
-                {"option":"<script>"},
-                {"option":"<style>"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"Nodejs",
-            "question": "The Node.js modules can be exposed using:",
-            "options": [
-                {"option":"expose"},
-                {"option":"module"},
-                {"option":"exports"},
-                {"option":"All of the above"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"Nodejs",
-            "question": "Which of the following extension is used to save the Node.js files?",
-            "options": [
-                {"option":".js"},
-                {"option":".node"},
-                {"option":".java"},
-                {"option":".txt"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"ASP.net",
-            "question": "What is ASP.NET?",
-            "options": [
-                {"option":"A programming language"},
-                {"option":"A web application framework"},
-                {"option":"A database management system"},
-                {"option":"An operating system"}
-            ]
-        },
-        {
-            "type":"radio",
-            "category":"ASP.net",
-            "question": "What is the extension of an ASP.NET page?",
-            "options": [
-                {"option":".asp"},
-                {"option":".aspx"},
-                {"option":".php"},
-                {"option":".html"}
-            ]
+          "option": "Backend"
         }
-    ]
+      ]
+    },
+    {
+      "type": "checkbox",
+      "category": "Frontend",
+      "question": "What skills do you have as a frontend developer?",
+      "options": [
+        {
+          "option": "Angular"
+        },
+        {
+          "option": "React"
+        },
+        {
+          "option": "HTML & CSS"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "category": "Backend",
+      "question": "What skills do you have as a backend developer?",
+      "options": [
+        {
+          "option": "Nodejs"
+        },
+        {
+          "option": "ASP.net"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "Angular",
+      "question": "Angular is primarily considered as?",
+      "options": [
+        {
+          "option": "A JavaScript Framework"
+        },
+        {
+          "option": "A CSS Framework"
+        },
+        {
+          "option": "A content management system"
+        },
+        {
+          "option": "A database system"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "Angular",
+      "question": "How can you generate a new service using Angular CLI?",
+      "options": [
+        {
+          "option": "ng create service my-service"
+        },
+        {
+          "option": "ng generate service my-service"
+        },
+        {
+          "option": "ng new service my-service"
+        },
+        {
+          "option": "ng add service my-service"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "React",
+      "question": "Which of the following command is used to install create-react-app?",
+      "options": [
+        {
+          "option": "npm install -g create-react-app"
+        },
+        {
+          "option": "npm install create-react-app"
+        },
+        {
+          "option": "npm install -f create-react-app"
+        },
+        {
+          "option": "install -g create-react-app"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "React",
+      "question": "What is the default port where webpack-server runs?",
+      "options": [
+        {
+          "option": "3000"
+        },
+        {
+          "option": "8080"
+        },
+        {
+          "option": "3030"
+        },
+        {
+          "option": "6060"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "HTML & CSS",
+      "question": "Which of the following element is responsible for making the text bold in HTML?",
+      "options": [
+        {
+          "option": "<pre>"
+        },
+        {
+          "option": "<a>"
+        },
+        {
+          "option": "<b>"
+        },
+        {
+          "option": "<br>"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "HTML & CSS",
+      "question": " Which of the following tag is used to embed css in html page?",
+      "options": [
+        {
+          "option": "<css>"
+        },
+        {
+          "option": "<!DOCTYPE html>"
+        },
+        {
+          "option": "<script>"
+        },
+        {
+          "option": "<style>"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "Nodejs",
+      "question": "The Node.js modules can be exposed using:",
+      "options": [
+        {
+          "option": "expose"
+        },
+        {
+          "option": "module"
+        },
+        {
+          "option": "exports"
+        },
+        {
+          "option": "All of the above"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "Nodejs",
+      "question": "Which of the following extension is used to save the Node.js files?",
+      "options": [
+        {
+          "option": ".js"
+        },
+        {
+          "option": ".node"
+        },
+        {
+          "option": ".java"
+        },
+        {
+          "option": ".txt"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "ASP.net",
+      "question": "What is ASP.NET?",
+      "options": [
+        {
+          "option": "A programming language"
+        },
+        {
+          "option": "A web application framework"
+        },
+        {
+          "option": "A database management system"
+        },
+        {
+          "option": "An operating system"
+        }
+      ]
+    },
+    {
+      "type": "radio",
+      "category": "ASP.net",
+      "question": "What is the extension of an ASP.NET page?",
+      "options": [
+        {
+          "option": ".asp"
+        },
+        {
+          "option": ".aspx"
+        },
+        {
+          "option": ".php"
+        },
+        {
+          "option": ".html"
+        }
+      ]
+    }
+  ],
+  "Response": [
+    {
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend",
+        "Backend"
+      ]
+    },
+    {
+      "id": "eb34",
+      "selectedQuestion": "What skills do you have as a frontend developer?"
+    },
+    {
+      "id": "fa71",
+      "selectedQuestion": "Angular is primarily considered as?"
+    }
+  ]
 }
