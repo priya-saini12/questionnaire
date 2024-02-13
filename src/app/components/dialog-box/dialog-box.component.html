@@ -1,12 +1,10 @@
 <div class="main">
     <div *ngIf="isFirst">
-        <!-- <span *ngFor="let question of myVisibleQues"> -->
-            <p>{{myVisibleQues[currentIndex].question}}</p>
+        <p>{{myVisibleQues[currentIndex].question}}</p>
             <span *ngFor="let option of myVisibleQues[currentIndex].options; let i = index">
                 <app-radio [type]="myVisibleQues[currentIndex].type" [value]='i'
                     (click)="selectedOption(myVisibleQues[currentIndex].options[i].option)">{{option.option}}</app-radio>
             </span>
-        <!-- </span> -->
     </div>
     <div *ngIf="!isFirst">
             <p>{{filterQuestion[currentIndex].question}}</p>
@@ -16,10 +14,10 @@
                 <app-checkbox [type]="filterQuestion[currentIndex].type"
                     (click)="selectedOption(filterQuestion[currentIndex].options[i].option)">{{option.option}}</app-checkbox>
             </span>
-        
     </div>
     <div class="buttons">
-        <button mat-raised-button color="warn" (click)="prev()">Previous</button>&nbsp;
-        <button mat-raised-button color="accent" (click)="next()">Next</button>
+        <button mat-raised-button color="warn" (click)="prev()" [disabled]="selectedOptions.length != 0">Previous</button>&nbsp;
+        <button mat-raised-button color="accent" (click)="next()"  [disabled]="selectedOptions.length == 0">Next</button>
+        <!-- <button mat-dialog-close="true">Close</button> -->
     </div>
 </div>

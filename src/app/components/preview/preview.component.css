@@ -1,0 +1,7 @@
+.main{
+    height: calc(100vh - 100px);
+    max-width: 1000px;
+    box-shadow: 0 0 8px grey;
+    padding: 30px;
+    overflow: auto;
+}

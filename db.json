@@ -11,7 +11,8 @@
         {
           "option": "Backend"
         }
-      ]
+      ],
+      "id": "e4be"
     },
     {
       "type": "checkbox",
@@ -27,7 +28,8 @@
         {
           "option": "HTML & CSS"
         }
-      ]
+      ],
+      "id": "bd54"
     },
     {
       "type": "checkbox",
@@ -40,7 +42,8 @@
         {
           "option": "ASP.net"
         }
-      ]
+      ],
+      "id": "1092"
     },
     {
       "type": "radio",
@@ -59,7 +62,8 @@
         {
           "option": "A database system"
         }
-      ]
+      ],
+      "id": "ae16"
     },
     {
       "type": "radio",
@@ -78,7 +82,8 @@
         {
           "option": "ng add service my-service"
         }
-      ]
+      ],
+      "id": "5dee"
     },
     {
       "type": "radio",
@@ -97,7 +102,8 @@
         {
           "option": "install -g create-react-app"
         }
-      ]
+      ],
+      "id": "7c26"
     },
     {
       "type": "radio",
@@ -116,7 +122,8 @@
         {
           "option": "6060"
         }
-      ]
+      ],
+      "id": "ab60"
     },
     {
       "type": "radio",
@@ -135,7 +142,8 @@
         {
           "option": "<br>"
         }
-      ]
+      ],
+      "id": "7be7"
     },
     {
       "type": "radio",
@@ -154,7 +162,8 @@
         {
           "option": "<style>"
         }
-      ]
+      ],
+      "id": "29c4"
     },
     {
       "type": "radio",
@@ -173,7 +182,8 @@
         {
           "option": "All of the above"
         }
-      ]
+      ],
+      "id": "60d1"
     },
     {
       "type": "radio",
@@ -192,7 +202,8 @@
         {
           "option": ".txt"
         }
-      ]
+      ],
+      "id": "6745"
     },
     {
       "type": "radio",
@@ -211,7 +222,8 @@
         {
           "option": "An operating system"
         }
-      ]
+      ],
+      "id": "7531"
     },
     {
       "type": "radio",
@@ -230,24 +242,55 @@
         {
           "option": ".html"
         }
-      ]
+      ],
+      "id": "b37c"
     }
   ],
   "Response": [
     {
+      "id": "8357",
       "selectedQuestion": "What is your role in development?",
       "selectedAns": [
-        "Frontend",
-        "Backend"
+        "Frontend"
       ]
     },
     {
-      "id": "eb34",
-      "selectedQuestion": "What skills do you have as a frontend developer?"
+      "id": "8bf2",
+      "selectedQuestion": "What skills do you have as a frontend developer?",
+      "selectedAns": [
+        "React"
+      ]
     },
     {
-      "id": "fa71",
-      "selectedQuestion": "Angular is primarily considered as?"
+      "id": "d16b",
+      "selectedQuestion": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "npm install create-react-app",
+        "npm install create-react-app"
+      ]
+    },
+    {
+      "id": "49a8",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend"
+      ]
+    },
+    {
+      "id": "c8c7",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend"
+      ]
+    },
+    {
+      "id": "fc64",
+      "selectedQuestion": "What skills do you have as a frontend developer?",
+      "selectedAns": [
+        "Angular",
+        "React",
+        "HTML & CSS"
+      ]
     }
   ]
 }

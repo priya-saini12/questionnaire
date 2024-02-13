@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CheckboxComponent } from './Shared/components/checkbox/checkbox.component';
 import { RadioComponent } from './Shared/components/radio/radio.component';
 import { QuestionsService } from './Shared/Services/questions.service';
+import { PreviewComponent } from './components/preview/preview.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { QuestionsService } from './Shared/Services/questions.service';
     InputFieldComponent,
     DialogBoxComponent,
     CheckboxComponent,
-    RadioComponent
+    RadioComponent,
+    PreviewComponent
   ],
   imports: [
     BrowserModule,
