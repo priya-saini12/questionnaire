@@ -15,7 +15,4 @@ constructor(private _service:QuestionsService){}
     this.questions=data;
    });
   }
-
-
-
 }

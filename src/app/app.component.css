@@ -1,12 +1,13 @@
 .main{
     background-color:#FFEECC;
     width: 100%;
-    max-width: 280px;
+    max-width: 300px;
     box-shadow: 0 0 8px grey;
-    text-align: center;
-    padding: 30px;
+    padding: 50px;
     margin: auto;
     border-radius: 10px;
     top: 35%;
     position: relative;
+    display: flex;
+    justify-content: space-evenly;
 }

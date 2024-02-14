@@ -248,48 +248,245 @@
   ],
   "Response": [
     {
-      "id": "8357",
+      "id": "392d",
       "selectedQuestion": "What is your role in development?",
       "selectedAns": [
-        "Frontend"
+        "Backend"
       ]
     },
     {
-      "id": "8bf2",
+      "id": "601c",
       "selectedQuestion": "What skills do you have as a frontend developer?",
       "selectedAns": [
-        "React"
+        "Nodejs"
       ]
     },
     {
-      "id": "d16b",
+      "id": "1ac3",
       "selectedQuestion": "What skills do you have as a backend developer?",
       "selectedAns": [
-        "npm install create-react-app",
-        "npm install create-react-app"
+        "module"
       ]
     },
     {
-      "id": "49a8",
+      "id": "88ef",
+      "selectedQuestion": "Angular is primarily considered as?",
+      "selectedAns": [
+        ".node"
+      ]
+    },
+    {
+      "id": "f7e5",
+      "selectedQuestion": "How can you generate a new service using Angular CLI?",
+      "selectedAns": []
+    },
+    {
+      "id": "aec5",
       "selectedQuestion": "What is your role in development?",
       "selectedAns": [
         "Frontend"
       ]
     },
     {
-      "id": "c8c7",
+      "id": "b8b8",
+      "selectedQuestion": "What skills do you have as a frontend developer?",
+      "selectedAns": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "b3ce",
+      "selectedQuestion": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "A CSS Framework"
+      ]
+    },
+    {
+      "id": "9904",
+      "selectedQuestion": "Angular is primarily considered as?",
+      "selectedAns": [
+        "ng add service my-service"
+      ]
+    },
+    {
+      "id": "35d4",
+      "selectedQuestion": "How can you generate a new service using Angular CLI?",
+      "selectedAns": []
+    },
+    {
+      "id": "8350",
+      "selectedQuestion": "Which of the following command is used to install create-react-app?",
+      "selectedAns": []
+    },
+    {
+      "id": "3c5c",
+      "selectedQuestion": "What is the default port where webpack-server runs?",
+      "selectedAns": []
+    },
+    {
+      "id": "2ce0",
+      "selectedQuestion": "Which of the following element is responsible for making the text bold in HTML?",
+      "selectedAns": []
+    },
+    {
+      "id": "7f98",
+      "selectedQuestion": " Which of the following tag is used to embed css in html page?",
+      "selectedAns": []
+    },
+    {
+      "id": "d7fe",
       "selectedQuestion": "What is your role in development?",
       "selectedAns": [
         "Frontend"
       ]
     },
     {
-      "id": "fc64",
+      "id": "822e",
+      "selectedQuestion": "What skills do you have as a frontend developer?",
+      "selectedAns": [
+        "HTML & CSS"
+      ]
+    },
+    {
+      "id": "53d6",
+      "selectedQuestion": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "<b>"
+      ]
+    },
+    {
+      "id": "e1ad",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend"
+      ]
+    },
+    {
+      "id": "e7e9",
+      "selectedQuestion": "What skills do you have as a frontend developer?",
+      "selectedAns": [
+        "Angular"
+      ]
+    },
+    {
+      "id": "7335",
+      "selectedQuestion": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "A JavaScript Framework"
+      ]
+    },
+    {
+      "id": "4c80",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Backend"
+      ]
+    },
+    {
+      "id": "e7d2",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Backend"
+      ]
+    },
+    {
+      "id": "9913",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend"
+      ]
+    },
+    {
+      "id": "997f",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend"
+      ]
+    },
+    {
+      "id": "404c",
+      "selectedQuestion": false,
+      "selectedAns": [
+        "Backend"
+      ]
+    },
+    {
+      "id": "bc45",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend"
+      ]
+    },
+    {
+      "id": "b503",
       "selectedQuestion": "What skills do you have as a frontend developer?",
       "selectedAns": [
         "Angular",
-        "React",
         "HTML & CSS"
+      ]
+    },
+    {
+      "id": "0258",
+      "selectedQuestion": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "A JavaScript Framework"
+      ]
+    },
+    {
+      "id": "1016",
+      "selectedQuestion": "Angular is primarily considered as?",
+      "selectedAns": [
+        "ng generate service my-service"
+      ]
+    },
+    {
+      "id": "e183",
+      "selectedQuestion": "How can you generate a new service using Angular CLI?",
+      "selectedAns": [
+        "<br>"
+      ]
+    },
+    {
+      "id": "b8e2",
+      "selectedQuestion": "Which of the following command is used to install create-react-app?",
+      "selectedAns": [
+        "<style>"
+      ]
+    },
+    {
+      "id": "ebd0",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Frontend",
+        "Backend"
+      ]
+    },
+    {
+      "id": "02d0",
+      "selectedQuestion": "What is your role in development?",
+      "selectedAns": [
+        "Backend"
+      ]
+    },
+    {
+      "id": "4df5",
+      "selectedQuestion": "What skills do you have as a frontend developer?",
+      "selectedAns": [
+        "ASP.net"
+      ]
+    },
+    {
+      "id": "a27d",
+      "selectedQuestion": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "An operating system"
+      ]
+    },
+    {
+      "id": "6b16",
+      "selectedQuestion": "Angular is primarily considered as?",
+      "selectedAns": [
+        ".html"
       ]
     }
   ]

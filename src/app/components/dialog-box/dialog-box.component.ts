@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { MatDialogRef } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 
 @Component({
@@ -15,9 +16,9 @@ export class DialogBoxComponent implements OnInit {
   option: any;
   filterQuestion: any[] = [];
   isFirst: boolean = true;
-  currentQuestion: any = [];
+  btn: string = "Next";
 
-  constructor(private _service: QuestionsService, private dialogRef: MatDialogRef<DialogBoxComponent>) { }
+  constructor(private _service: QuestionsService, private _dialogRef:MatDialogRef<DialogBoxComponent>) { }
   ngOnInit() {
     this._service.getQuestions().subscribe(data => {
       this.questions = data;
@@ -45,14 +46,18 @@ export class DialogBoxComponent implements OnInit {
     if (this.filterQuestion.length > 0) {
       this.currentIndex++;
     }
-    this.filterQuestions();
+    if (this.filterQuestion.length === this.currentIndex + 1) {
+      this.btn = "Submit";
+    }
     let response = {
       selectedQuestion: this.questions[this.currentIndex].question,
       selectedAns: this.selectedOptions
     }
+   
     this._service.selectedQuestions(response).subscribe();
-    this.selectedOptions = [];
 
+    this.filterQuestions();
+    this.selectedOptions = [];
   }
   prev() {
     if (this.currentIndex > 0) {
@@ -62,6 +67,6 @@ export class DialogBoxComponent implements OnInit {
   }
 
   // closeDialog() {
-  //   this.dialogRef.close();
+  //  
   // }
 }
