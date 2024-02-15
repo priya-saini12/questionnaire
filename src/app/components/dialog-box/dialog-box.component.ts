@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { Router } from '@angular/router';
 import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 
 @Component({
@@ -15,8 +14,9 @@ export class DialogBoxComponent implements OnInit {
   selectedOptions: string[] = [];
   option: any;
   filterQuestion: any[] = [];
-  isFirst: boolean = true;
+ first: boolean = true;
   btn: string = "Next";
+  currentAnswers: any = [];
 
   constructor(private _service: QuestionsService, private _dialogRef:MatDialogRef<DialogBoxComponent>) { }
   ngOnInit() {
@@ -26,39 +26,59 @@ export class DialogBoxComponent implements OnInit {
     })
   }
 
-  selectedOption(option: string) {
-    this.selectedOptions.push(option);
-  }
 
+  selectedOption(option: string, checkboxQues: boolean, ele?: any) {
+    // debugger
+    if(checkboxQues === true){
+      this.selectedOptions.push(option);
+      // console.log(this.selectedOptions);
+    }
+else{
+  this.currentAnswers = [option];
+  // console.log(this.currentAnswers);
+  
+}
+    
+  }
+  
   filterQuestions() {
-    this.isFirst = false;
+    this.first = false;
     for (let option of this.selectedOptions) {
       this.option = option
       for (let question of this.questions) {
         if (question.category === this.option) {
           this.filterQuestion.push(question);
+          
         }
       }
     }
   }
-
   next() {
+    // this.selectedOptions = [...this.selectedOptions, ...this.currentAnswers];
+    if (this.first) {
+      let response = {
+        selectedQuestion: this.myVisibleQues[this.currentIndex].question,
+        selectedAns: this.selectedOptions
+      };
+      this._service.selectedQuestions(response).subscribe();
+    } else {
+      let response = {
+        selectedQuestion: this.filterQuestion[this.currentIndex].question,
+        selectedAns: this.selectedOptions
+      };
+      this._service.selectedQuestions(response).subscribe();
+    }
+    
     if (this.filterQuestion.length > 0) {
       this.currentIndex++;
     }
     if (this.filterQuestion.length === this.currentIndex + 1) {
       this.btn = "Submit";
     }
-    let response = {
-      selectedQuestion: this.questions[this.currentIndex].question,
-      selectedAns: this.selectedOptions
-    }
-   
-    this._service.selectedQuestions(response).subscribe();
-
+    
     this.filterQuestions();
-    this.selectedOptions = [];
   }
+  
   prev() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
