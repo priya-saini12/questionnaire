@@ -16,9 +16,7 @@
         </span>
     </div>
     <div class="buttons">
-        <button mat-raised-button color="warn" (click)="prev()"
-            [disabled]="selectedOptions.length != 0">Previous</button>&nbsp;
-        <button mat-raised-button color="accent" (click)="next()"
-            [disabled]="selectedOptions.length == 0">{{btn}}</button>
+        <button mat-raised-button color="warn" (click)="prev()">Previous</button>&nbsp;
+        <button mat-raised-button color="accent" (click)="next()">{{btn}}</button>
     </div>
 </div>

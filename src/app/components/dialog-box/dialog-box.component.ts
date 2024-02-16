@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialogRef } from '@angular/material/dialog';
 import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 
 @Component({
@@ -12,13 +11,12 @@ export class DialogBoxComponent implements OnInit {
   myVisibleQues: any = [];
   questions: any[] = [];
   selectedOptions: string[] = [];
-  option: any;
   filterQuestion: any[] = [];
- first: boolean = true;
+  first: boolean = true;
   btn: string = "Next";
   currentAnswers: any = [];
 
-  constructor(private _service: QuestionsService, private _dialogRef:MatDialogRef<DialogBoxComponent>) { }
+  constructor(private _service: QuestionsService) { }
   ngOnInit() {
     this._service.getQuestions().subscribe(data => {
       this.questions = data;
@@ -29,32 +27,33 @@ export class DialogBoxComponent implements OnInit {
 
   selectedOption(option: string, checkboxQues: boolean, ele?: any) {
     // debugger
-    if(checkboxQues === true){
-      this.selectedOptions.push(option);
-      // console.log(this.selectedOptions);
+    if (checkboxQues === true) {
+      // this.selectedOptions.push(option);
+      if (!this.selectedOptions.includes(option)) {
+        this.selectedOptions.push(option);
+      }
+      else {
+        this.selectedOptions.splice(this.selectedOptions.indexOf(option), 1)
+      }
     }
-else{
-  this.currentAnswers = [option];
-  // console.log(this.currentAnswers);
-  
-}
-    
+    else {
+      this.currentAnswers = [option];
+    }
   }
-  
+
   filterQuestions() {
     this.first = false;
     for (let option of this.selectedOptions) {
-      this.option = option
       for (let question of this.questions) {
-        if (question.category === this.option) {
+        if (question.category === option) {
           this.filterQuestion.push(question);
-          
         }
       }
     }
   }
   next() {
-    // this.selectedOptions = [...this.selectedOptions, ...this.currentAnswers];
+    this.selectedOptions = [...this.selectedOptions, ...this.currentAnswers];
+
     if (this.first) {
       let response = {
         selectedQuestion: this.myVisibleQues[this.currentIndex].question,
@@ -68,25 +67,21 @@ else{
       };
       this._service.selectedQuestions(response).subscribe();
     }
-    
     if (this.filterQuestion.length > 0) {
       this.currentIndex++;
     }
     if (this.filterQuestion.length === this.currentIndex + 1) {
       this.btn = "Submit";
     }
-    
     this.filterQuestions();
+    this.selectedOptions = [];
+    this.currentAnswers = [];
   }
-  
+
   prev() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.filterQuestions();
     }
   }
-
-  // closeDialog() {
-  //  
-  // }
 }
