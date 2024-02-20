@@ -1,20 +1,12 @@
 <div class="main">
-    <div *ngIf="first">
-        <p>{{myVisibleQues[currentIndex].question}}</p>
-        <span *ngFor="let option of myVisibleQues[currentIndex].options; let i = index">
-            <app-radio [type]="myVisibleQues[currentIndex].type" [value]='i'
-                (click)="selectedOption(myVisibleQues[currentIndex].options[i].option, false)">{{option.option}}</app-radio>
-        </span>
-    </div>
-    <div *ngIf="!first">
-        <p>{{filterQuestion[currentIndex].question}}</p>
-        <span *ngFor="let option of filterQuestion[currentIndex].options; let i = index">
-            <app-radio [type]="filterQuestion[currentIndex].type" [value]='i'
-                (click)="selectedOption(option.option, false)">{{option.option}}</app-radio>
-            <app-checkbox [type]="filterQuestion[currentIndex].type" #checkbox
-                (click)="selectedOption(option.option, true, checkbox)">{{option.option}}</app-checkbox>
-        </span>
-    </div>
+    <p>{{allQuestions[currentIndex].question}}</p>
+    <span *ngFor="let option of allQuestions[currentIndex].options; let i = index">
+        <app-radio [type]="allQuestions[currentIndex].type" [value]='i'
+            (click)="selectedOption(option.option, false)">{{option.option}}</app-radio>
+        <app-checkbox [type]="allQuestions[currentIndex].type" #checkbox
+            (click)="selectedOption(option.option, true, checkbox)">{{option.option}}</app-checkbox>
+    </span>
+
     <div class="buttons">
         <button mat-raised-button color="warn" (click)="prev()">Previous</button>&nbsp;
         <button mat-raised-button color="accent" (click)="next()">{{btn}}</button>
