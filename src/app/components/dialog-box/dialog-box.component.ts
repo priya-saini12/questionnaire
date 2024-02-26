@@ -9,87 +9,78 @@ import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 
 export class DialogBoxComponent implements OnInit {
   currentIndex: number = 0;
-  myVisibleQues: any[] = [];
   questions: any[] = [];
   selectedOptions: string[] = [];
   filterQuestion: any[] = [];
   btn: string = "Next";
-  currentAnswers: any[] = [];
   allQuestions: any[] = [];
-  latestquestions: any[] = [];
   response: any[] = [];
   obj: any = {};
-  display : any[]=[];
-  myResponse: any ;
+
   constructor(private _service: QuestionsService) { }
 
   ngOnInit() {
-    
+
     this._service.getQuestions().subscribe(data => {
       this.questions = data;
-      this.myVisibleQues.push(this.questions[0]);
-      this.allQuestions = this.myVisibleQues;
-      // this.display.push(this.questions[0])
-      //   console.log(this.display);
+      this.allQuestions.push(this.questions[0]);
     })
   }
 
   selectedOption(option: string, checkboxQues: boolean, ele?: any) {
+
     if (checkboxQues === true) {
-      if (!this.selectedOptions.includes(option)) {
+      if (ele.checked) {
         this.selectedOptions.push(option)
-      }
-      else {
+      } else {
         this.selectedOptions.splice(this.selectedOptions.indexOf(option), 1)
       }
     }
     else {
-      this.currentAnswers = [option];
+      this.selectedOptions = [option];
     }
   }
 
-  filterQuestions() {    
+  filterQuestions() {
     for (let option of this.selectedOptions) {
       for (let question of this.questions) {
         if (question.category === option) {
-          this.filterQuestion.push(question);
-          this.allQuestions = [...this.myVisibleQues, ...this.filterQuestion];  
+          this.allQuestions = [...this.allQuestions, question];
         }
       }
     }
   }
 
   next() {
-    // debugger
-    this.selectedOptions = [...this.selectedOptions, ...this.currentAnswers];
-    
-    this.obj = {
-      selectedQues: this.allQuestions[this.currentIndex].question,
-      selectedAns: this.selectedOptions
-    }
-    this.response.push(this.obj);
-   
-    if (this.allQuestions.length > 0) {
+    // this.obj = {
+    //   selectedQues: this.allQuestions[this.currentIndex].question,
+    //   selectedAns: this.selectedOptions
+    // }
+    // this.response.push(this.obj);
+    this.filterQuestions();
+    if (this.allQuestions.length > (this.currentIndex + 1)) {
       this.currentIndex++;
     }
-    if (this.allQuestions.length === this.currentIndex + 1) {
-      this.btn = "Submit";
-      this._service.selectedQuestions(this.response).subscribe();
-    }
-    this.filterQuestions();
+
+
+    // if (this.allQuestions.length == (this.currentIndex + 1)) {
+    //   this.btn = "Submit";
+    //   this._service.selectedQuestions(this.response).subscribe();
+    //   }
     this.selectedOptions = [];
-    this.currentAnswers = [];
   }
 
-  prev() { 
-    // this.filterQuestion.pop();
+  prev() {
+    if (this.currentIndex >= 2) {
+      this.allQuestions.splice(2, this.allQuestions.length);
+    }
+    else {
+      this.allQuestions.pop();
+    }
     if (this.currentIndex > 0) {
       this.currentIndex--;
-      this.response.splice(this.currentIndex, 1)
-      this.filterQuestion=[];
+      // this.response.splice(this.currentIndex, 1)
       this.filterQuestions();
-      // this.selectedOptions=[]
     }
   }
-
 }
