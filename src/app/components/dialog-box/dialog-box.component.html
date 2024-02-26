@@ -4,7 +4,7 @@
         <app-radio [type]="allQuestions[currentIndex].type" [value]='i'
             (click)="selectedOption(option.option, false)">{{option.option}}</app-radio>
         <app-checkbox [type]="allQuestions[currentIndex].type" #checkbox
-            (click)="selectedOption(option.option, true, checkbox)">{{option.option}}</app-checkbox>
+            (click)="selectedOption(option.option, true)">{{option.option}}</app-checkbox>
     </span>
 
     <div class="buttons">
