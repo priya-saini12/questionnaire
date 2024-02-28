@@ -247,6 +247,33 @@
     }
   ],
   "Response": [
-  
+    {
+      "id": "773a",
+      "selectedQues": "What is your role in development?",
+      "selectedAns": [
+        "Backend"
+      ]
+    },
+    {
+      "id": "016b",
+      "selectedQues": "What skills do you have as a backend developer?",
+      "selectedAns": [
+        "Nodejs"
+      ]
+    },
+    {
+      "id": "dd00",
+      "selectedQues": "The Node.js modules can be exposed using:",
+      "selectedAns": [
+        "module"
+      ]
+    },
+    {
+      "id": "826e",
+      "selectedQues": "Which of the following extension is used to save the Node.js files?",
+      "selectedAns": [
+        ".java"
+      ]
+    }
   ]
 }

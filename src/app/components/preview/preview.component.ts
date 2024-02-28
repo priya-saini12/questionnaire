@@ -12,9 +12,7 @@ export class PreviewComponent implements OnInit{
 constructor(private _service:QuestionsService){}
   ngOnInit(): void {
    this._service.get().subscribe((data)=>{
-    this.questions=data;    
-    console.log(this.questions);
-    
-   });
+    this.questions=data;   
+  });
   }
 }

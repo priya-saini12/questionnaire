@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { QuestionsService } from 'src/app/Shared/Services/questions.service';
 
 @Component({
   selector: 'app-dialog-box',
   templateUrl: './dialog-box.component.html',
-  styleUrls: ['./dialog-box.component.css']
+  styleUrls: ['./dialog-box.component.css'],
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 export class DialogBoxComponent implements OnInit {
   currentIndex: number = 0;
   questions: any[] = [];
   selectedOptions: string[] = [];
-  filterQuestion: any[] = [];
   btn: string = "Next";
   allQuestions: any[] = [];
   response: any[] = [];
@@ -52,35 +52,33 @@ export class DialogBoxComponent implements OnInit {
   }
 
   next() {
-    // this.obj = {
-    //   selectedQues: this.allQuestions[this.currentIndex].question,
-    //   selectedAns: this.selectedOptions
-    // }
-    // this.response.push(this.obj);
+    this.obj = {
+      selectedQues: this.allQuestions[this.currentIndex].question,
+      selectedAns: this.selectedOptions
+    }
+    this._service.selectedQuestions(this.obj).subscribe();
     this.filterQuestions();
-    if (this.allQuestions.length > (this.currentIndex + 1)) {
+    if (this.allQuestions.length > this.currentIndex) {
       this.currentIndex++;
     }
-
-
-    // if (this.allQuestions.length == (this.currentIndex + 1)) {
+    // if (this.allQuestions.length === (this.currentIndex + 1)) {
     //   this.btn = "Submit";
-    //   this._service.selectedQuestions(this.response).subscribe();
-    //   }
+    // }
     this.selectedOptions = [];
   }
 
+  
   prev() {
     if (this.currentIndex >= 2) {
-      this.allQuestions.splice(2, this.allQuestions.length);
+      this.allQuestions.splice(2);
     }
     else {
       this.allQuestions.pop();
     }
-    if (this.currentIndex > 0) {
+      if (this.currentIndex > 0) {
       this.currentIndex--;
       // this.response.splice(this.currentIndex, 1)
-      this.filterQuestions();
     }
+    this.filterQuestions();
   }
 }

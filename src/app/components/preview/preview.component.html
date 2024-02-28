@@ -1,8 +1,9 @@
 <div class="main">
-    <div *ngFor="let question of questions">
-        <p>Question: {{question.seletedQues}}</p>
-        <ul type="circle" *ngFor="let ans of question.selectedAns">
-            <li>{{ans}}</li>
-        </ul>
+        <div *ngFor ="let ques of questions">
+            <p>Question: {{ques.selectedQues}}</p>
+            <ul type="circle" *ngFor="let ans of ques.selectedAns">
+                <li>{{ans}}</li>
+            </ul>
     </div>
 </div>
+
